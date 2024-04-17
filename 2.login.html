@@ -1,1 +1,15 @@
 
+<?php
+    // 啟動 session
+    session_start();
+    
+    // 移除 session 中的用戶 id
+    unset($_SESSION["id"]);
+
+    // 顯示登出成功的訊息
+    echo "登出成功....";
+
+    // 重新導向至 login.html 頁面，延遲 3 秒後跳轉
+    echo "<meta http-equiv=REFRESH content='3; url=2.login.html'>";
+
+?>        
