@@ -1,15 +1,20 @@
 
-<?php
-    // 啟動 session
-    session_start();
-    
-    // 移除 session 中的用戶 id
-    unset($_SESSION["id"]);
-
-    // 顯示登出成功的訊息
-    echo "登出成功....";
-
-    // 重新導向至 login.html 頁面，延遲 3 秒後跳轉
-    echo "<meta http-equiv=REFRESH content='3; url=2.login.html'>";
-
-?>        
+<html>
+    <head>
+        <!-- 設定文件編碼為 UTF-8 -->
+        <meta charset="utf-8" />
+        <!-- 設定網頁標題 -->
+        <title>登入範例</title>
+    </head>
+    <body>
+        <!-- 登入表單 -->
+        <form method=post action="2.login.php">
+            <!-- 帳號輸入欄位 -->
+            帳號：<input type=text name="id"><br />
+            <!-- 密碼輸入欄位 -->
+            密碼：<input type=password name="pwd"><p></p>
+            <!-- 提交按鈕和重置按鈕 -->
+            <input type=submit value="登入"> <input type=reset value="清除">
+        </form>
+    </body>
+</html>
